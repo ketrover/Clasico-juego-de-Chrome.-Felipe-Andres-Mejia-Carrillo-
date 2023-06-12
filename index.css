@@ -1,0 +1,205 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    background: rgb(158, 106, 168);
+    display: flex;
+    align-items: center;
+    border-radius: 100px;
+    box-shadow: 0 5px 30px rgb(182, 105, 206);
+}
+
+.contenedor {
+    width: 940px;
+    height: 290px;
+    margin: 0 auto;
+
+    position: relative;
+
+    background: linear-gradient(#ece497, #d1f2ff);
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 30px;
+    top: 16px;
+}
+
+.ee {
+    overflow: hidden;
+    height: 100vh;
+}
+
+.sol {
+    position: relative;
+    height: 100px;
+    float: right;
+    margin-right: 10px;
+    top: -5px;
+
+    box-shadow: 0 3px 50px rgb(247, 235, 69);
+    border-radius: 100px;
+}
+
+.dino {
+    width: 84px;
+    height: 84px;
+
+    position: absolute;
+    bottom: 22px;
+    left: 42px;
+    z-index: 2;
+
+    background: url(./img/dino.png) repeat-x 0px 0px;
+    background-size: 336px 84px;
+    background-position-x: 0px;
+}
+
+
+.dino-corriendo {
+    animation: animarDino 0.25s steps(2) infinite;
+
+}
+
+.dino-estrellado {
+    background-position-x: -252px;
+}
+
+.suelo {
+    width: 200%;
+    height: 42px;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    background: url(./img/suelo.png) repeat-x 0px 0px;
+    background-size: 50% 42px;
+}
+
+.cactus {
+    width: 46px;
+    height: 96px;
+
+    position: absolute;
+    bottom: 16px;
+    left: 600px;
+    z-index: 1;
+
+    background: url(./img/cactus1.png) no-repeat;
+}
+
+.cactus2 {
+    width: 98px;
+    height: 66px;
+
+    background: url(./img/cactus2.png) no-repeat;
+}
+
+.nube {
+    width: 92px;
+    height: 26px;
+
+    position: absolute;
+    z-index: 0;
+
+    background: url(./img/nube.png) no-repeat;
+    background-size: 92px 26px;
+}
+
+.score {
+    width: 100px;
+    height: 30px;
+
+    position: absolute;
+    top: 20px;
+    right: 150px;
+    z-index: 10;
+
+    color: #d34822;
+    font-family: verdana;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.score2 {
+    width: 100px;
+    height: 30px;
+
+    position: absolute;
+    top: 20px;
+    right: 250px;
+    z-index: 10;
+
+    color: #d34822;
+    font-family: verdana;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.phone {
+    position: absolute;
+    border: 30px solid rgb(197, 16, 16);
+    border-radius: 20px;
+    height: 340px;
+    width: 990px;
+    box-shadow: 0 5px 50px rgb(15, 14, 15);
+    margin-left: 160px;
+    top: 130px;
+
+}
+
+@keyframes capa {
+
+    0%,
+    20% {
+        background-image: url(./img/apocaliptico.jpg);
+    }
+
+    20%,
+    45% {
+        background-image: url(./img/solcool.png);
+    }
+
+
+}
+
+@keyframes animarDino {
+    from {
+        background-position-x: -84px;
+    }
+
+    to {
+        background-position-x: -252px;
+    }
+
+}
+
+.game-over {
+    display: none;
+
+    position: absolute;
+    width: 100%;
+
+
+    text-align: center;
+    color: #0d775b;
+    font-size: 30px;
+    font-family: Verdana;
+    font-weight: 700;
+}
+
+
+
+.capa{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0, 6);
+      
+      }
